@@ -31,6 +31,9 @@ module.exports = {
 
   // we are interested in.
   resolve: {
+    alias: {
+      Materialize: path.resolve(__dirname, 'src/ui/materialize'),
+    },
     extensions: ['.js', '.jsx'],
   },
 
