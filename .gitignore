@@ -6,6 +6,8 @@ appsettings*.json
 bundleconfig.json
 web.config
 
+wwwroot/js/app.js
+
 # MSTest test Results
 [TestResults]/
 
