@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Container = ({ children, useDefaultPadding }) => {
-  return <div className={useDefaultPadding ? 'container' : ''}>{children}</div>;
+const Container = ({ children, useDefaultPadding, ...forwardedProps }) => {
+  return (
+    <div className={useDefaultPadding ? 'container' : ''} {...forwardedProps}>
+      {children}
+    </div>
+  );
 };
 
 Container.propTypes = {
