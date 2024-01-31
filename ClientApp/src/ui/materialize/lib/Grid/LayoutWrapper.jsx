@@ -5,6 +5,20 @@ import {
   combineClassNames,
 } from '../util/responsiveLayout';
 
+const offsetClassNameMapper = {
+  smOffsetBy: 'offset-s',
+  medOffsetBy: 'offset-m',
+  lrgOffsetBy: 'offset-l',
+  xlrgOffsetBy: 'offset-xl',
+};
+
+const pushClassNameMapper = {
+  smPush: 'push-s',
+  medPush: 'push-m',
+  lrgPush: 'push-l',
+  xlrgPush: 'push-xl',
+};
+
 /**
  * Todo:
  * memoize calculations
@@ -33,13 +47,6 @@ const LayoutWrapper = ({
     xlrgCols,
   });
 
-  const offsetClassNameMapper = {
-    smOffsetBy: 'offset-s',
-    medOffsetBy: 'offset-m',
-    lrgOffsetBy: 'offset-l',
-    xlrgOffsetBy: 'offset-xl',
-  };
-
   const gridOffsetClassName = getMappedClassNames(
     {
       smOffsetBy,
@@ -49,13 +56,6 @@ const LayoutWrapper = ({
     },
     offsetClassNameMapper
   );
-
-  const pushClassNameMapper = {
-    smPush: 'push-s',
-    medPush: 'push-m',
-    lrgPush: 'push-l',
-    xlrgPush: 'push-xl',
-  };
 
   const gridPushClassName = getMappedClassNames(
     {
