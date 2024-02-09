@@ -2,15 +2,16 @@ const getGridLayout = ({ smCols, medCols, lrgCols, xlrgCols }) => {
   return `col s${smCols} m${medCols} l${lrgCols} xl${xlrgCols}`;
 };
 
-const getMappedClassNames = (offsetByOptions, mapper) => {
-  const offSetClassNames = [];
+const getMappedClassNames = (values, mapper) => {
+  const classNames = [];
 
-  Object.entries(offsetByOptions).forEach(([key, value]) => {
+  Object.entries(values).forEach(([key, value]) => {
     const mappedClassName = mapper[key];
-    offSetClassNames.push(value !== null ? `${mappedClassName}-${value}` : '');
+
+    if (value) classNames.push(`${mappedClassName}${value}`);
   });
 
-  return offSetClassNames.join(' ');
+  return classNames.join(' ');
 };
 
 const combineClassNames = (...args) => {
@@ -28,7 +29,9 @@ const combineClassNames = (...args) => {
     else throw Error('Arguements must be either an Array, series of strings');
   });
 
-  return classNames.join(delimiter);
+  const className = classNames.join(delimiter).trim();
+
+  return className !== '' ? `col ${className}` : className;
 };
 
 export { getGridLayout, getMappedClassNames, combineClassNames };

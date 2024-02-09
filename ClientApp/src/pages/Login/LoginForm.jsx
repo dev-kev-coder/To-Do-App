@@ -1,10 +1,15 @@
 import React from 'react';
 import { CardPanel } from 'materialize';
-import './login.css';
 
 const LoginForm = () => {
   return (
-    <CardPanel style={{ height: '50em', width: '50em' }}>
+    <CardPanel
+      lrgCols={6}
+      medCols={12}
+      smCols={12}
+      lrgOffsetBy={3}
+      style={{ height: '90dvh', marginTop: '3rem', marginBottom: '1rem' }}
+    >
       <h2>Login Form</h2>
     </CardPanel>
   );

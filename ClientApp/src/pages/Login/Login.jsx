@@ -2,13 +2,15 @@ import React from 'react';
 import LoginPageContainer from './components/LoginPageContainer';
 import LoginForm from './LoginForm';
 import './login.css';
-import { Row } from '../../ui/materialize';
+import { Row } from 'materialize';
 
 const Login = () => {
   return (
     <>
       <LoginPageContainer>
-        <LoginForm />
+        <Row style={{ height: '100%' }}>
+          <LoginForm />
+        </Row>
       </LoginPageContainer>
     </>
   );
