@@ -1,9 +1,13 @@
 import React from 'react';
 import LayoutWrapper from '../Grid/LayoutWrapper';
 
-const WrappedCardPanel = ({ children, ...forwardedProps }) => {
+const WrappedCardPanel = ({
+  children,
+  materializeColor = 'teal',
+  ...forwardedProps
+}) => {
   return (
-    <div className="card-panel teal" {...forwardedProps}>
+    <div className={`card-panel ${materializeColor}`} {...forwardedProps}>
       {children}
     </div>
   );

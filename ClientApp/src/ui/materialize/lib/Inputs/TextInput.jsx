@@ -1,22 +1,25 @@
 import React from 'react';
 import LayoutWrapper from '../Grid/LayoutWrapper';
 
+// TODO: be able to accept and display icons
 const WrappedInput = ({
   id,
-  placeHolder = '',
+  placeHolder = null,
   type = 'text',
-  label = '',
+  label = null,
+  disabled = false,
   ...forwardedProps
 }) => {
   return (
     <div className="input-field" {...forwardedProps}>
       <input
+        disabled={disabled}
         className="validate"
         id={id}
         placeholder={placeHolder}
         type={type}
       />
-      <label htmlFor={id}>{label}</label>
+      {label ? <label htmlFor={id}>{label}</label> : null}
     </div>
   );
 };

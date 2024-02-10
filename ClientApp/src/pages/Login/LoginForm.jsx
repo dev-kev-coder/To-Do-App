@@ -4,14 +4,16 @@ import './login.css';
 
 const LoginForm = () => {
   return (
-    <CardPanel style={{ height: '50em', width: '50em' }}>
+    <CardPanel
+      materializeColor="blue-grey lighten-1"
+      lrgCols={6}
+      medCols={12}
+      smCols={12}
+      lrgOffsetBy={3}
+      style={{ height: '90dvh', marginTop: '3rem', marginBottom: '1rem' }}
+    >
       <h2>Login Form</h2>
       <TextInput id="test" label="UserName" />
-
-      <div className="input-field col s6">
-        <input id="last_name" type="text" className="validate" />
-        <label htmlFor="last_name">Last Name</label>
-      </div>
     </CardPanel>
   );
 };

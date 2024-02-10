@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  getGridLayout,
   getMappedClassNames,
   combineClassNames,
 } from '../util/responsiveLayout';
@@ -17,6 +16,13 @@ const pushClassNameMapper = {
   medPush: 'push-m',
   lrgPush: 'push-l',
   xlrgPush: 'push-xl',
+};
+
+const gridClassNameMapper = {
+  smCols: 's',
+  medCols: 'm',
+  lrgCols: 'l',
+  xlrgCols: 'xl',
 };
 
 /**
@@ -40,12 +46,15 @@ const LayoutWrapper = ({
   xlrgPush,
   ...forwardedProps
 }) => {
-  const gridLayoutClassName = getGridLayout({
-    smCols,
-    medCols,
-    lrgCols,
-    xlrgCols,
-  });
+  const gridLayoutClassName = getMappedClassNames(
+    {
+      smCols,
+      medCols,
+      lrgCols,
+      xlrgCols,
+    },
+    gridClassNameMapper
+  );
 
   const gridOffsetClassName = getMappedClassNames(
     {
