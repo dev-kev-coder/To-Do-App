@@ -3,11 +3,11 @@ import LayoutWrapper from '../Grid/LayoutWrapper';
 
 const WrappedCardPanel = ({
   children,
-  materializeColor = 'teal',
+  className = 'teal',
   ...forwardedProps
 }) => {
   return (
-    <div className={`card-panel ${materializeColor}`} {...forwardedProps}>
+    <div className={`card-panel ${className}`} {...forwardedProps}>
       {children}
     </div>
   );

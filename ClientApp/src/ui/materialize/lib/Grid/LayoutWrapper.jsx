@@ -32,10 +32,10 @@ const gridClassNameMapper = {
  */
 const LayoutWrapper = ({
   LayoutComponet,
-  smCols,
-  medCols,
-  lrgCols,
-  xlrgCols,
+  smCols = 12,
+  medCols = 12,
+  lrgCols = 12,
+  xlrgCols = 12,
   smOffsetBy,
   medOffsetBy,
   lrgOffsetBy,

@@ -1,7 +1,10 @@
 .login-page-container {
   height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+}
+
+.form-panel {
+  height: '90dvh';
+  margin-top: '3rem';
+  margin-bottom: '1rem';
+  text-align: 'center';
 }
