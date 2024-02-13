@@ -7,19 +7,41 @@ const WrappedInput = ({
   placeHolder = null,
   type = 'text',
   label = null,
+  inputStyle = {},
+  labelStyle = {},
+  helperText = null,
   disabled = false,
+  inline = false,
   ...forwardedProps
 }) => {
+  const inputClassName = inline ? 'input-field inline' : 'input-field';
+
   return (
-    <div className="input-field" {...forwardedProps}>
+    <div className={inputClassName} {...forwardedProps}>
       <input
         disabled={disabled}
         className="validate"
         id={id}
         placeholder={placeHolder}
         type={type}
+        style={{ ...inputStyle }}
       />
-      {label ? <label htmlFor={id}>{label}</label> : null}
+
+      {label ? (
+        <label style={{ ...labelStyle }} htmlFor={id}>
+          {label}
+        </label>
+      ) : null}
+
+      {helperText ? (
+        <span
+          className="helper-text"
+          data-error="in-correct"
+          data-success="correct"
+        >
+          {helperText}
+        </span>
+      ) : null}
     </div>
   );
 };
