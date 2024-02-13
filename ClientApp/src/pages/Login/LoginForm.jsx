@@ -6,7 +6,7 @@ const formPanelStyle = {
   height: '50dvh',
   marginTop: '3rem',
   marginBottom: '1rem',
-  textAlign: 'center',
+  // textAlign: 'center',
 };
 
 const LoginForm = () => {
@@ -23,12 +23,11 @@ const LoginForm = () => {
       style={formPanelStyle}
     >
       <h2>Sign In</h2>
+
       <TextInput id="form_username" label="User Name" />
       <TextInput id="form_password" label="Password" type="password" />
 
       <RaisedButton waves>Test</RaisedButton>
-      <a class="waves-effect waves-yellow btn">button</a>
-      {/* <a class="waves-effect waves-teal btn-flat">Button</a> */}
     </CardPanel>
   );
 };
